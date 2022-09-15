@@ -1,0 +1,65 @@
+SANDBOX-EXEC(1) - General Commands Manual
+
+# NAME
+
+**sandbox-exec** - execute within a sandbox (DEPRECATED)
+
+# SYNOPSIS
+
+**sandbox-exec**
+\[**-f**&nbsp;*profile-file*]
+\[**-n**&nbsp;*profile-name*]
+\[**-p**&nbsp;*profile-string*]
+\[**-D**&nbsp;*key=value&nbsp;...*]
+*command*
+\[*arguments&nbsp;...*]
+
+# DESCRIPTION
+
+The
+**sandbox-exec**
+command is
+**DEPRECATED**.
+Developers who wish to sandbox an app should instead adopt the App Sandbox feature described in the App Sandbox Design Guide.
+The
+**sandbox-exec**
+command enters a sandbox using a profile specified by the
+**-f**,
+**-n**,
+or
+**-p**
+option and executes
+*command*
+with
+*arguments*.
+
+The options are as follows:
+
+**-f** *profile-file*
+
+> Read the profile from the file named
+> *profile-file*.
+
+**-n** *profile-name*
+
+> Use the pre-defined profile
+> *profile-name*.
+
+**-p** *profile-string*
+
+> Specify the profile to be used on the command line.
+
+**-D** *key=value*
+
+> Set the profile parameter
+> *key*
+> to
+> *value*.
+
+# SEE ALSO
+
+sandbox\_init(3),
+sandbox(7),
+sandboxd(8)
+
+Mac OS X - March 9, 2017

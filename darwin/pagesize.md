@@ -1,0 +1,33 @@
+PAGESIZE(1) - General Commands Manual
+
+# NAME
+
+**pagesize** - print system page size
+
+# SYNOPSIS
+
+**pagesize**
+
+# DESCRIPTION
+
+The
+**pagesize**
+utility prints the size of a page of memory in bytes, as
+returned by
+getpagesize(3).
+This program is useful in constructing portable
+shell scripts.
+
+# SEE ALSO
+
+getpagesize(3)
+
+# HISTORY
+
+The
+**pagesize**
+command
+appeared in
+4\.2BSD.
+
+macOS 12.6 - June 6, 1993

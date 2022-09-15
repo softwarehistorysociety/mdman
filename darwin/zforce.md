@@ -1,0 +1,44 @@
+ZFORCE(1) - General Commands Manual
+
+# NAME
+
+**zforce** - force gzip files to have a .gz suffix
+
+# SYNOPSIS
+
+**zforce**
+*file&nbsp;...*
+
+# DESCRIPTION
+
+The
+**zforce**
+utility renames
+gzip(1)
+files to have a
+'.gz'
+suffix, so that
+gzip(1)
+will not compress them twice.
+This can be useful if file names were truncated during a file transfer.
+Files that have an existing
+'.gz',
+'-gz',
+'\_gz',
+'.tgz'
+or
+'.taz'
+suffix, or that have not been compressed by
+gzip(1),
+are ignored.
+
+# SEE ALSO
+
+gzip(1)
+
+# CAVEATS
+
+**zforce**
+overwrites existing files without warning.
+
+macOS 12.6 - January 26, 2007

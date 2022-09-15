@@ -1,0 +1,63 @@
+TTY(1) - General Commands Manual
+
+# NAME
+
+**tty** - return user's terminal name
+
+# SYNOPSIS
+
+**tty**
+\[**-s**]
+
+# DESCRIPTION
+
+The
+**tty**
+utility writes the name of the terminal attached to standard input
+to standard output.
+The name that is written is the string returned by
+ttyname(3).
+If the standard input is not a terminal, the message
+"`not a tty`"
+is written.
+The options are as follows:
+
+**-s**
+
+> Do not write the terminal name; only the exit status is affected
+> when this option is specified.
+> The
+> **-s**
+> option is deprecated in favor of the
+> "`test -t 0`"
+> command.
+
+# EXIT STATUS
+
+The
+**tty**
+utility
+exits 0 if the standard input is a terminal, 1 if the standard input is
+not a terminal, and &gt;1 if an error occurs.
+
+# SEE ALSO
+
+test(1),
+ttyname(3)
+
+# STANDARDS
+
+The
+**tty**
+utility is expected to be
+IEEE Std 1003.2 (&#8220;POSIX.2&#8221;)
+compatible.
+
+# HISTORY
+
+A
+**tty**
+command appeared in
+Version&#160;1 AT&T UNIX.
+
+macOS 12.6 - June 6, 1993

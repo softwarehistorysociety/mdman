@@ -1,0 +1,69 @@
+TEE(1) - General Commands Manual
+
+# NAME
+
+**tee** - duplicate standard input
+
+# SYNOPSIS
+
+**tee**
+\[**-ai**]
+\[*file&nbsp;...*]
+
+# DESCRIPTION
+
+The
+**tee**
+utility copies standard input to standard output,
+making a copy in zero or more files.
+The output is unbuffered.
+
+The following options are available:
+
+**-a**
+
+> Append the output to the files rather than
+> overwriting them.
+
+**-i**
+
+> Ignore the
+> `SIGINT`
+> signal.
+
+The following operands are available:
+
+*file*
+
+> A pathname of an output
+> *file*.
+
+The
+**tee**
+utility takes the default action for all signals,
+except in the event of the
+**-i**
+option.
+
+# EXIT STATUS
+
+The **tee** utility exits&#160;0 on success, and&#160;&gt;0 if an error occurs.
+
+# EXAMPLES
+
+Send the echoed message both to stdout and to the
+*greetings.txt*
+file:
+
+	$ echo "Hello" | tee greetings.txt
+	Hello
+
+# STANDARDS
+
+The
+**tee**
+utility is expected to be
+IEEE Std 1003.2 (&#8220;POSIX.2&#8221;)
+compatible.
+
+macOS 12.6 - June 23, 2020
